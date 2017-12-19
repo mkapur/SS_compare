@@ -7,10 +7,9 @@ output: html_notebook
 
 ## Script to execute comparison plotting of sensitivty runs for SS3
 
-
 ```{r "setup"}
 require(knitr)
-rootdir = "G:/SSBOOT/SM_EM_1/2017-12-15"
+rootdir = "your_dir"
 opts_knit$set(root.dir = rootdir)
 ```
 
@@ -22,11 +21,10 @@ library(dplyr)
 library(ggplot2)
 
 setwd(rootdir)
-source("G:/SS_compare/ss_arrange_fn.R")
-source("G:/SS_compare/ss_compare_fn.R")
-source("G:/SS_compare/kobe_compare_fn.R")
+source("ss_arrange_fn.R")
+source("ss_compare_fn.R")
+source("kobe_compare_fn.R")
 ```
-
 Run function `ss_compare()` to generate all plots, each of which will include every sensitivity run in the directory. "pattern" should be an identifying label that matches the folder names
 for all sensitivity runs you'd like to examine. "llabels" are the lables that will appear on all plot legends.
 If `CSV = T`, a .csv file will be generated with per-fleet likelihoods according to  `likeLabel` and `lambdaLabel`, which should be available in summaryoutput$likelihoods$Label. 
