@@ -27,7 +27,7 @@ source("kobe_compare_fn.R")
 ```
 Run function `ss_compare()` to generate all plots, each of which will include every sensitivity run in the directory. "pattern" should be an identifying label that matches the folder names
 for all sensitivity runs you'd like to examine. "llabels" are the lables that will appear on all plot legends.
-If `CSV = T`, a .csv file will be generated with per-fleet likelihoods according to  `likeLabel` and `lambdaLabel`, which should be available in summaryoutput$likelihoods$Label. 
+If `likeCSV = T`, a .csv file will be generated with per-fleet likelihoods according to  `likeLabel` and `lambdaLabel`, which should be available in `summaryoutput$likelihoods$Label`. 
 
 ```{r}
 ss_compare(rootdir, 
