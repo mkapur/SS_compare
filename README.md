@@ -6,6 +6,9 @@ output: html_notebook
 ---
 
 ## Script to execute comparison plotting of sensitivty runs for SS3
+![Four-Panel Sensitivity Comparison](https://raw.githubusercontent.com/mkapur/SS_compare/master/Biology.png)
+
+The above uses code code from `sensitivity-plots.R`. The information below refers to some wrapper functions used with r4ss to generate comparitive sensitivity plots for estimation models with many replicates. It is somewhat outdated; please see kaputils https://github.com/mkapur/kaputils.
 
 ```{r "setup"}
 require(knitr)
